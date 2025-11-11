@@ -1,0 +1,15 @@
+echo "Checking your commit message format... 📝"
+
+pnpm commitlint \
+
+if [ $? -ne 0 ]; then
+  echo "Invalid commit message! 🚫"
+  echo "💡 Use the Conventional Commits format, e.g.:"
+  echo "     feat(ui): add login button"
+  echo "     fix(auth): correct token validation"
+  exit 1
+fi
+
+echo "Commit message looks great! ✅"
+echo "Keeping a clean commit history! 🧠"
+echo "Message approved, sir! 🫡"

@@ -1,0 +1,13 @@
+echo "Running pre-commit checks... 🧹"
+echo "Linting and formatting staged files with ESLint & Prettier... 🎯"
+
+pnpm lint-staged
+
+if [ $? -ne 0 ]; then
+  echo "Pre-commit checks failed! Fix the issues and try again. ❌"
+  exit 1
+fi
+
+echo "All clean! Code formatted and linted successfully. ✅"
+echo "Commit ready to be created! 🪄"
+echo "Commit complete, sir! 🫡"

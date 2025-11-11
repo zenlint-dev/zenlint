@@ -1,0 +1,72 @@
+{
+  "name": "@zenlint/zenlint",
+  "version": "1.0.0",
+  "description": "Zenlint CLI for scaffolding linting configurations",
+  "type": "module",
+  "main": "dist/cli.js",
+  "types": "dist/cli.d.ts",
+  "homepage": "zenlint.dev",
+  "engines": {
+    "node": ">=20",
+    "npm": ">=9"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "bin": {
+    "zenlint": "dist/cli.js"
+  },
+  "keywords": [
+    "eslint",
+    "vite",
+    "typescript",
+    "cli",
+    "developer-tools"
+  ],
+  "scripts": {
+    "type-check": "tsc --noEmit",
+    "dev": "tsx watch src/cli.ts",
+    "build": "tsup src/cli.ts --format esm --dts --minify",
+    "start": "node dist/cli.js",
+    "test": "node --test",
+    "lint": "eslint . --ext .ts",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "commitlint": "commitlint --edit",
+    "prepare": "husky",
+    "preview-pack": "pnpm pack --dry-run",
+    "changelog": "conventional-changelog -p conventionalcommits -i CHANGELOG.md -s",
+    "release": "pnpm run build && pnpm run preview-pack && pnpm publish"
+  },
+  "author": {
+    "name": "Houssam Ouhra",
+    "email": "houssamouhra11@gmail.com",
+    "url": "https://github.com/houssamouhra"
+  },
+  "repository": {
+    "url": "https://github.com/zenlint-dev/zenlint",
+    "type": "git"
+  },
+  "license": "MIT",
+  "packageManager": "pnpm@10.19.0",
+  "devDependencies": {
+    "@commitlint/cli": "^20.1.0",
+    "@commitlint/config-conventional": "^20.0.0",
+    "@eslint/js": "^9.38.0",
+    "@types/node": "^24.9.1",
+    "eslint": "^9.38.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.6",
+    "prettier": "3.6.2",
+    "tsup": "^8.5.0",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.46.2"
+  },
+  "dependencies": {
+    "@clack/prompts": "^0.11.0",
+    "conventional-changelog": "^7.1.1",
+    "ora": "^9.0.0",
+    "picocolors": "^1.1.1"
+  }
+}

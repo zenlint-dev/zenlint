@@ -1,0 +1,42 @@
+{
+  "compilerOptions": {
+    // Environment Settings
+    "module": "nodenext",
+    "target": "esnext",
+    "moduleResolution": "nodenext",
+    "rootDir": "src",
+    "outDir": "dist",
+
+    // Types & Libraries
+    "lib": ["esnext"],
+    "types": ["node"],
+
+    // Other Outputs
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+
+    // Safety & Strictness
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "noImplicitOverride": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": false, // disable early; later can turn on for stricter discipline
+
+    // ESM Behavior
+    "verbatimModuleSyntax": true, // ensures imports stay clean
+    "moduleDetection": "force",
+    // "allowImportingTsExtensions": true, // optional: helps if you want import './file.ts'
+    "resolveJsonModule": true, // allows import of package.json
+
+    "isolatedModules": true,
+    "noUncheckedSideEffectImports": true,
+    "skipLibCheck": true,
+
+    // Misc
+    "noEmitOnError": true, // don't emit broken builds
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": ["src"]
+}
