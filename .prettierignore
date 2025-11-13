@@ -1,1 +1,14 @@
-.lintstagedrc.yml
+dist/
+node_modules/
+pnpm-lock.yaml
+
+.git/
+.husky/
+.github/
+.vscode/
+
+tsconfig.json
+tsup.config.ts
+eslint.config.js
+commitlint.config.js
+.prettierignore
