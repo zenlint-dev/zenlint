@@ -1,7 +1,7 @@
 {
-  "name": "@zenlint/zenlint",
+  "name": "zenlint",
   "version": "1.0.0",
-  "description": "Zenlint CLI for scaffolding linting configurations",
+  "description": "Instant dev setup for new Vite projects.",
   "type": "module",
   "main": "dist/cli.js",
   "types": "dist/cli.d.ts",
@@ -16,11 +16,22 @@
   "bin": {
     "zenlint": "dist/cli.js"
   },
+  "files": [
+    "dist"
+  ],
   "keywords": [
-    "eslint",
     "vite",
     "typescript",
+    "eslint",
+    "prettier",
+    "commitlint",
+    "husky",
+    "linting",
+    "boilerplate",
+    "scaffold",
     "cli",
+    "setup",
+    "dev-tools",
     "developer-tools"
   ],
   "scripts": {
