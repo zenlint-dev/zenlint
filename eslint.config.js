@@ -9,6 +9,7 @@ export default defineConfig([
     'dist',
     'node_modules',
     'tsup.config.ts',
+    'vitest.config.ts',
     'eslint.config.js',
     'commitlint.config.js',
   ]),
