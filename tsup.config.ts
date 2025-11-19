@@ -8,6 +8,7 @@ export default defineConfig({
   shims: true,
   clean: true,
   outDir: 'dist',
+  minify: true,
   splitting: false,
   sourcemap: true,
 });
