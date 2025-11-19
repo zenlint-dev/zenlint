@@ -57,6 +57,14 @@ export default defineConfig([
       ],
     },
   },
+    {
+    files: ["tests/**/*.ts"],
+    languageOptions: {
+      parserOptions: {
+        project: "./tsconfig.test.json",
+      },
+    },
+  },
 
   //  Disable stylistic rules that conflict with Prettier
   prettier,

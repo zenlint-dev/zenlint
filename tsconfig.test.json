@@ -1,0 +1,9 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "noEmit": true,
+    "types": ["vitest", "node"],
+    "isolatedModules": false
+  },
+  "include": ["tests/**/*.ts"]
+}
